@@ -1,6 +1,10 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UNGRATEFULL POTATO — Birthday Investigation</title>
 <style>
 :root{--bg:#110d12;--paper:#1c151b;--paper2:#251b22;--ink:#f4eadf;--muted:#b7a6ad;--red:#d84b4b;--pink:#e78a9b;--green:#879b70;--line:#49343d}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#39212b 0,#110d12 48%);color:var(--ink);font-family:Georgia,serif}button,a{font:inherit}#app{min-height:100vh;overflow-x:hidden}.web{position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.8}.web:before,.web:after{content:"";position:absolute;width:150px;height:150px;border:1px solid #b99aa855;border-radius:50%;}.web:before{top:-65px;left:-55px}.web:after{top:-65px;right:-55px}.web i{position:absolute;width:220px;height:1px;background:#b99aa855;transform-origin:left}.web i:nth-child(1){top:15px;left:0;transform:rotate(22deg)}.web i:nth-child(2){top:55px;left:0;transform:rotate(48deg)}.web i:nth-child(3){top:95px;left:0;transform:rotate(74deg)}.web i:nth-child(4){top:15px;right:0;transform:rotate(158deg)}.web i:nth-child(5){top:55px;right:0;transform:rotate(132deg)}.web i:nth-child(6){top:95px;right:0;transform:rotate(106deg)}header{position:relative;z-index:10;text-align:center;padding:55px 20px 28px}.stamp{display:none}.title{font-size:clamp(42px,9vw,78px);line-height:.9;margin:22px 0 12px;text-shadow:0 5px 0 #000}.title span{color:var(--pink)}.sub{color:var(--muted);font:15px/1.6 Arial;max-width:620px;margin:auto}.notice{display:none}main{position:relative;z-index:6;max-width:920px;margin:auto;padding:10px 18px 90px}.section-title{text-align:center;margin:48px 0 20px}.section-title h2{font-size:30px;margin:0 0 5px}.section-title p{font:12px Arial;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}.creature{position:relative;display:block;text-decoration:none;color:var(--ink);background:linear-gradient(145deg,#271b22,#171116);border:1px solid var(--line);border-radius:18px;padding:14px;min-height:210px;box-shadow:0 12px 30px #0008;transition:.2s;overflow:hidden}.creature:hover{transform:translateY(-5px) rotate(-1deg);border-color:#8a5966}.monster{height:130px;display:flex;align-items:center;justify-content:center;position:relative}.animal{font-size:88px;filter:grayscale(.25) drop-shadow(0 8px 4px #000);position:relative}.monster{height:130px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.animalImg{width:200%;height:200%;max-width:none;object-fit:cover;border-radius:12px;display:block;filter:drop-shadow(0 8px 4px #000);position:absolute;left:0;top:0}.animalImg[style*="right top"]{left:-100%}.animalImg[style*="left bottom"]{top:-100%}.animalImg[style*="right bottom"]{left:-100%;top:-100%}.animalImg[style*="left top"]{left:0}.held{font-size:37px;position:absolute;bottom:18px;right:25%;transform:rotate(-8deg);filter:drop-shadow(0 4px 2px #000)}.eyes{position:absolute;top:28px;letter-spacing:15px;font-size:18px;color:#fff}.creature h3{font:bold 17px Arial;margin:4px 0}.creature small{font:11px Arial;color:var(--muted)}.quest{border-color:#7d3038;background:linear-gradient(145deg,#30151a,#160d10)}.report{margin:42px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;max-width:720px;box-shadow:0 20px 50px #0009}.report h2{margin-top:0;font-size:25px}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fact{background:var(--paper2);padding:15px;border-radius:12px;border:1px solid #3b2a31}.fact b{display:block;font:12px Arial;color:var(--muted);text-transform:uppercase;letter-spacing:1px}.fact strong{display:block;font-size:25px;margin-top:5px}.cta{display:block;width:max-content;border:0;cursor:pointer;margin:24px auto 0;padding:13px 19px;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font:bold 13px Arial}.footer{text-align:center;color:#806d75;font:11px Arial;margin-top:45px}
+
+#secretPotato{position:fixed;right:18px;bottom:18px;z-index:9999;border:1px solid #e7c34b;border-radius:999px;background:#261b22;color:#ffe7a6;padding:10px 13px;font-size:22px;cursor:pointer;box-shadow:0 4px 16px #0008}
+#eggToast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%) translateY(12px);opacity:0;pointer-events:none;z-index:10000;max-width:min(90vw,520px);background:#2a1b24;color:#ffe8ec;border:1px solid #d8879a;border-radius:14px;padding:13px 17px;text-align:center;font-weight:700;box-shadow:0 8px 28px #0009;transition:opacity .2s,transform .2s}
+#eggToast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 </style></head><body><style>
 #questOverlay .spinBox{max-width:560px;width:100%;background:#1c151b;border:1px solid #49343d;border-radius:22px;padding:28px 22px 24px;box-shadow:0 25px 70px #000;text-align:center}
 #questOverlay .spinTitle{font:700 28px Georgia,serif;margin:0 0 6px;color:#f4eadf}
@@ -33,7 +37,7 @@
 #questOverlay .maheen{left:68%;top:28%;transform:translate(-50%,-50%);font-size:20px}
 #questOverlay .innerArrow{position:absolute;left:68%;top:28%;width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:38px solid #f0c84b;filter:drop-shadow(0 3px 3px #000);transform:translate(-50%,-68px) rotate(54deg);transform-origin:50% 68px;z-index:5;animation:none}
 @keyframes arrowSpin{from{transform:translate(-50%,-68px) rotate(54deg)}to{transform:translate(-50%,-68px) rotate(1494deg)}}
-#questOverlay .innerArrow.spinning{animation:arrowSpin 4.2s cubic-bezier(.12,.78,.12,1) forwards}
+#questOverlay .innerArrow.spinning{animation:arrowSpin 1s cubic-bezier(.12,.78,.12,1) forwards}
 #questOverlay .countdown{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:bold 76px Arial;color:#fff;text-shadow:0 5px 0 #a92735,0 0 18px #000;z-index:10;opacity:0;pointer-events:none}
 #questOverlay .countdown.show{animation:countPop .72s ease both}
 @keyframes countPop{0%{opacity:0;transform:scale(.55)}20%{opacity:1;transform:scale(1.08)}75%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.15)}}
@@ -43,6 +47,12 @@
 #questOverlay .spinBtn{border:1px solid #f0c84b;background:#2a2025;color:#f4eadf;border-radius:999px;padding:13px 24px;font:bold 13px Arial;cursor:pointer;letter-spacing:1px}
 #questOverlay .spinBtn:disabled{opacity:.45;cursor:default}
 #questOverlay #questMsg{min-height:22px;color:#e78a9b;font:bold 14px Arial;margin-top:14px}
+#soundControls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:10px auto 0}
+#soundControls button,.eggToast button{border:1px solid #76515f;background:#251b22;color:#f4eadf;border-radius:999px;padding:9px 13px;font:bold 11px Arial;cursor:pointer}
+#eggToast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(140px);opacity:0;transition:.3s;z-index:20000;background:#251b22;border:1px solid #e78a9b;border-radius:16px;padding:14px 18px;max-width:min(90vw,420px);text-align:center;box-shadow:0 12px 35px #000b;font: bold 14px Arial;color:#f4eadf}
+#eggToast.show{transform:translateX(-50%) translateY(0);opacity:1}
+#secretPotato{position:fixed;right:12px;bottom:12px;z-index:50;border:1px solid #76515f;border-radius:50%;width:46px;height:46px;background:#251b22;color:#f4eadf;font-size:24px;cursor:pointer;box-shadow:0 5px 18px #0008;transition:transform .2s}
+#secretPotato:hover{transform:rotate(-18deg) scale(1.1)}
 </style>
 <style id="nicknameStartStyles">
 #nicknameOverlay{position:fixed;inset:0;z-index:10001;background:radial-gradient(circle at 50% -10%,#39212b 0,#110d12 48%);display:flex;align-items:center;justify-content:center;padding:20px;text-align:center}
@@ -55,6 +65,24 @@
 #nicknameOverlay button.wrong{background:#4b2025;border-color:#d84b4b}
 #nicknameOverlay button.correct{border-color:#879b70}
 #nicknameMsg{min-height:22px;color:#e78a9b;font:bold 13px Arial;margin-top:15px}
+</style>
+<style id="questQuestionUIStyles">
+/* Match the first nickname screen: centered dark card, muted prompt, chunky choices. */
+#questOverlay #questQuestions{width:100%;max-width:456px;margin:18px auto 0;text-align:center}
+#questOverlay .qIntro{color:#b7a6ad;font:15px/1.45 Arial,sans-serif;margin:0 0 16px}
+#questOverlay .qCard{width:100%;background:#1c151b;border:1px solid #49343d;border-radius:22px;padding:25px 22px 20px;box-shadow:0 12px 34px #0005}
+#questOverlay .qNum{font:bold 12px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#e78a9b;margin:0 0 16px}
+#questOverlay .qText{font:700 clamp(21px,4.6vw,28px)/1.25 Georgia,serif;color:#f4eadf;margin:0 auto 22px;max-width:390px;min-height:2.5em;display:flex;align-items:center;justify-content:center}
+#questOverlay .qChoices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px}
+#questOverlay .qChoice{min-width:0;border:1px solid #49343d;background:#251b22;color:#f4eadf;border-radius:12px;padding:14px 10px;cursor:pointer;font:bold 13px Arial,sans-serif;letter-spacing:.8px;transition:background .15s,border-color .15s,transform .15s}
+#questOverlay .qChoice:hover{border-color:#e78a9b;transform:translateY(-1px)}
+#questOverlay .qChoice.selected{background:#4b2631;border-color:#e78a9b;box-shadow:inset 0 0 0 1px #e78a9b55}
+#questOverlay .qNext{width:100%;border:1px solid #49343d;background:#e78a9b;color:#21151b;border-radius:12px;padding:14px 16px;cursor:pointer;font:bold 12px Arial,sans-serif;letter-spacing:1px;transition:opacity .15s,transform .15s}
+#questOverlay .qNext:not(:disabled):hover{transform:translateY(-1px);filter:brightness(1.06)}
+#questOverlay .qNext:disabled{opacity:.35;cursor:default}
+#questOverlay .qProgress{font:11px Arial,sans-serif;letter-spacing:2px;color:#806d75;margin-top:14px}
+#questOverlay .wheelQuestionTitle{max-width:560px;margin:0 auto 14px;padding:12px 16px;border:1px solid #49343d;border-radius:14px;background:#1c151b;color:#f4d9df;font:700 15px/1.4 Arial,sans-serif;letter-spacing:.4px;box-shadow:0 8px 24px #0004}
+@media(max-width:420px){#questOverlay .spinBox{padding:24px 16px 20px}#questOverlay .qCard{padding:22px 15px 18px}#questOverlay .qChoices{gap:8px}#questOverlay .qChoice{padding:13px 6px;font-size:12px}}
 </style>
 <div id="nicknameOverlay">
   <div class="nicknameBox">
@@ -72,7 +100,7 @@
 <div id="questOverlay" style="display:none;position:fixed;inset:0;z-index:9999;background:radial-gradient(circle at 50% -10%,#39212b 0,#110d12 48%);align-items:center;justify-content:center;padding:20px;text-align:center">
   <div class="questWeb" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="spinBox">
-    <h2 class="spinTitle">👁️ QUEST: WHO SHOULD APOLOGIZE?</h2>
+    <h2 class="spinTitle" id="questMainTitle">👁️ QUEST: WHO SHOULD APOLOGIZE?</h2>
     <p class="spinSub">Before the wheel decides, answer a few very serious questions. 😭</p>
     <div id="questQuestions">
       <div class="qIntro">No wrong answers. Probably.</div>
@@ -88,6 +116,7 @@
       </div>
     </div>
     <div id="questWheelArea">
+    <div class="wheelQuestionTitle" id="wheelQuestionTitle">QUESTION 1</div>
     <div class="wheelWrap">
       <div class="bear left" aria-hidden="true">
 <svg viewBox="0 0 120 140" role="img">
@@ -154,6 +183,7 @@
     </div>
     <button class="spinBtn" id="spinBtn">SPIN THE APOLOGY WHEEL</button>
     <div id="questMsg">The wheel decides. No arguing. 😭</div>
+    <div id="soundControls"><button id="soundToggle" type="button">🔊 SOUND ON — CHAOS ENABLED</button><button id="soundTest" type="button">🔊 TEST THE NOISE</button></div>
     </div>
   </div>
 </div>
@@ -169,6 +199,7 @@
 const o=document.getElementById("questOverlay"),m=document.getElementById("questMsg"),spinBtn=document.getElementById("spinBtn"),countdown=document.getElementById("countdown"),spinFlash=document.getElementById("spinFlash"),innerArrow=document.getElementById("innerArrow");
 const questQuestions=document.getElementById("questQuestions"),questWheelArea=document.getElementById("questWheelArea");
 const qNum=document.getElementById("qNum"),qText=document.getElementById("qText"),qNext=document.getElementById("qNext"),qProgress=document.getElementById("qProgress");
+const wheelQuestionTitle=document.getElementById("wheelQuestionTitle"),questMainTitle=document.getElementById("questMainTitle");
 const qChoices=[...document.querySelectorAll("#questQuestions .qChoice")];
 const questions=[
   "Who is more stubborn?",
@@ -177,45 +208,140 @@ const questions=[
   "Who has better nicknames?",
   "Who would act like they don’t care, but remember the tiniest things about the other?"
 ];
-let qIndex=0, qSelected="";
+let qIndex=0, qSelected="", busy=false, awaitingNextQuestion=false, questFinished=false;
 function renderQuestion(){
   qNum.textContent=`Question ${qIndex+1} of ${questions.length}`;
   qText.textContent=questions[qIndex];
   qProgress.textContent=`${qIndex+1} / ${questions.length}`;
-  qSelected=""; qNext.disabled=true; qNext.textContent=qIndex===questions.length-1?"REVEAL THE WHEEL":"NEXT QUESTION";
+  qSelected=""; qNext.disabled=true; qNext.textContent="SHOW THE WHEEL";
   qChoices.forEach(b=>b.classList.remove("selected"));
 }
+function showWheelForCurrentQuestion(){
+  questQuestions.style.display="none";
+  questWheelArea.style.display="block";
+  wheelQuestionTitle.textContent=`QUESTION ${qIndex+1}: ${questions[qIndex]}`;
+  questMainTitle.textContent="👁️ QUEST: QUESTION WHEEL";
+  m.textContent="Your answer is locked in. Let the wheel judge this question. 😭🥔";
+  spinBtn.textContent="SPIN THE WHEEL";
+  spinBtn.disabled=false;
+  awaitingNextQuestion=false;
+  questFinished=false;
+  innerArrow.classList.remove("spinning");
+}
 qChoices.forEach(btn=>btn.addEventListener("click",()=>{
+  playSfx("click");
   qChoices.forEach(b=>b.classList.remove("selected"));
   btn.classList.add("selected"); qSelected=btn.dataset.choice; qNext.disabled=false;
 }));
 qNext.addEventListener("click",()=>{
+  playSfx("click");
   if(!qSelected)return;
-  if(qIndex<questions.length-1){qIndex++;renderQuestion();}
-  else{questQuestions.style.display="none";questWheelArea.style.display="block";m.textContent="Okay. NOW LET THE WHEEL DECIDE. 😭🥔";}
+  showWheelForCurrentQuestion();
 });
-renderQuestion();
-let busy=false;
-function showCount(n){countdown.textContent=n;countdown.classList.remove("show");void countdown.offsetWidth;countdown.classList.add("show");}
+let soundEnabled=true;
+const soundToggle=document.getElementById("soundToggle"),soundTest=document.getElementById("soundTest");
+function playSfx(kind){
+  if(!soundEnabled && kind!=="test")return;
+  try{
+    const Ctx=window.AudioContext||window.webkitAudioContext;if(!Ctx)return;
+    const ctx=playSfx.ctx||(playSfx.ctx=new Ctx());
+    if(ctx.state==="suspended")ctx.resume();
+    const now=ctx.currentTime;
+    const tone=(freq,start,duration,type="sine",volume=.12,endFreq=null)=>{
+      const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=type;osc.frequency.setValueAtTime(freq,now+start);
+      if(endFreq!==null)osc.frequency.exponentialRampToValueAtTime(Math.max(1,endFreq),now+start+duration);
+      gain.gain.setValueAtTime(.0001,now+start);gain.gain.exponentialRampToValueAtTime(volume,now+start+.012);gain.gain.setValueAtTime(volume,now+start+Math.max(.02,duration*.55));gain.gain.exponentialRampToValueAtTime(.0001,now+start+duration);
+      osc.connect(gain);gain.connect(ctx.destination);osc.start(now+start);osc.stop(now+start+duration+.03);
+    };
+    if(kind==="click"){tone(620,0,.09,"square",.045,320)}
+    else if(kind==="hover"){tone(480,0,.055,"sine",.025,620)}
+    else if(kind==="pop"){tone(760,0,.075,"triangle",.06,420);tone(980,.045,.09,"sine",.035,700)}
+    else if(kind==="count"){tone(720,0,.16,"triangle",.10,440)}
+    else if(kind==="spin"){tone(140,0,.55,"sawtooth",.065,650);tone(300,.12,.48,"triangle",.065,900)}
+    else if(kind==="win"||kind==="test"){tone(523,0,.18,"triangle",.13);tone(659,.14,.18,"triangle",.13);tone(784,.28,.22,"triangle",.13);tone(1046,.48,.32,"triangle",.12)}
+    else if(kind==="roast"){tone(240,0,.20,"square",.09,115);tone(150,.20,.36,"sawtooth",.08,55);tone(95,.42,.25,"triangle",.10,48)}
+    else if(kind==="womp"){tone(210,0,.34,"sawtooth",.14,105);tone(165,.38,.52,"sawtooth",.15,72);tone(105,.40,.46,"triangle",.08,52)}
+    else if(kind==="complete"){tone(392,0,.2,"triangle",.12);tone(523,.15,.2,"triangle",.12);tone(659,.3,.2,"triangle",.12);tone(784,.45,.42,"triangle",.12)}
+  }catch(e){showEgg("Your browser blocked the sound engine. Try opening this page in Chrome and tapping Enable Sound.");}
+}
+soundToggle.addEventListener("click",()=>{
+  const Ctx=window.AudioContext||window.webkitAudioContext;
+  if(!Ctx){showEgg("This browser doesn't support the sound engine 😭 Try Chrome.");return;}
+  soundEnabled=!soundEnabled;
+  if(soundEnabled){const ctx=playSfx.ctx||(playSfx.ctx=new Ctx());if(ctx.state==="suspended")ctx.resume();soundToggle.textContent="🔊 SOUND ON — CHAOS ENABLED";playSfx("test");showEgg("SOUND UNLOCKED. The potato council is now audible. 🔊🥔");}
+  else soundToggle.textContent="🔇 SOUND OFF — TAP TO ENABLE";
+});
+soundTest.addEventListener("click",()=>{if(!soundEnabled){showEgg("Tap SOUND OFF first to enable it, then test again 😭");return;}playSfx("test");showEgg("TEST SOUND: BEEP BEEP POTATO DETECTED 🚨🥔");});
+// Sound is enabled by default. Browsers only permit audio after the first user gesture,
+// so unlock/resume the audio engine on the first interaction and keep effects site-wide.
+soundToggle.textContent="🔊 SOUND ON — CHAOS ENABLED";
+document.addEventListener("pointerdown",function unlockPotatoAudio(){
+  if(!soundEnabled)return;
+  const Ctx=window.AudioContext||window.webkitAudioContext;if(!Ctx)return;
+  const ctx=playSfx.ctx||(playSfx.ctx=new Ctx());if(ctx.state==="suspended")ctx.resume();
+},{once:true,passive:true});
+document.addEventListener("click",event=>{
+  const target=event.target&&event.target.closest?event.target.closest('a.creature, #nicknameOverlay button, .animalImg, .section-title, .notice, .stamp'):null;
+  if(!target)return;
+  if(target.matches('#nicknameOverlay button'))playSfx(target.dataset.answer==="correct"?"win":"roast");
+  else if(target.matches('a.creature'))playSfx("pop");
+  else playSfx("click");
+});
+document.addEventListener("pointerover",event=>{
+  const card=event.target&&event.target.closest?event.target.closest('a.creature'):null;
+  if(card&& !card.contains(event.relatedTarget))playSfx("hover");
+},{passive:true});
+let eggCount=0,eggTimer;
+function showEgg(msg){const el=document.getElementById("eggToast");el.textContent=msg;el.classList.add("show");clearTimeout(eggTimer);eggTimer=setTimeout(()=>el.classList.remove("show"),3200);}
+const secretPotatoBtn=document.getElementById("secretPotato");
+if(secretPotatoBtn) secretPotatoBtn.addEventListener("click",()=>{eggCount++;playSfx("click");const lines=["You found a potato. Your detective skills are concerning. 🥔","SECRET FILE UNLOCKED: Maheen is 73% menace, 27% marshmallow. 💀","Achievement unlocked: Professional Potato Investigator 🏆","The potato council has reviewed your click. You are suspicious. 👁️","FINAL SECRET: someone made this whole website just for you. 💗"];showEgg(lines[Math.min(eggCount-1,lines.length-1)]);if(eggCount===5){playSfx("complete");secretPotatoBtn.textContent="💗";}});
+function showCount(n){playSfx("count");countdown.textContent=n;countdown.classList.remove("show");void countdown.offsetWidth;countdown.classList.add("show");}
 function runQuest(){
- if(busy)return; busy=true; spinBtn.disabled=true; m.textContent="THE CRYSTAL BALL IS DECIDING... 😭";
+ if(awaitingNextQuestion){
+   if(qIndex<questions.length-1){
+     qIndex++; questQuestions.style.display="block"; questWheelArea.style.display="none";
+     questMainTitle.textContent="👁️ QUEST: WHO SHOULD APOLOGIZE?";
+     m.textContent="One question at a time. No escaping. 😭"; renderQuestion();
+   }else{
+     playSfx("complete"); questMainTitle.textContent="🥔 QUEST COMPLETE";
+     m.textContent="You survived all the questions. The potato council is proud. 😭🥔";
+     spinBtn.textContent="CLOSE QUEST"; awaitingNextQuestion=false; questFinished=true;
+   }
+   return;
+ }
+ if(questFinished){o.style.display="none";return;}
+ if(busy)return;
+ playSfx("spin"); busy=true; spinBtn.disabled=true; m.textContent="THE CRYSTAL BALL IS DECIDING... 😭";
  showCount("3");
  setTimeout(()=>showCount("2"),800);
  setTimeout(()=>showCount("1"),1600);
  setTimeout(()=>{spinFlash.classList.remove("show");void spinFlash.offsetWidth;spinFlash.classList.add("show");innerArrow.classList.remove("spinning");void innerArrow.offsetWidth;innerArrow.classList.add("spinning");},2400);
  setTimeout(()=>{
+   playSfx("womp");
    const winner="MAHEEN";
-   m.textContent=winner+" HAS TO APOLOGIZE 😭🥔";
-   spinBtn.textContent="SPIN AGAIN"; spinBtn.disabled=false; busy=false;
+   const roastLines=[
+     "MAHEEN LOST THE STUBBORNNESS OLYMPICS. PLEASE ACCEPT THIS TINY L 🏆😭",
+     "MAHEEN REPLIED SO LATE THE PIGEON GAVE UP AND GOT A JOB 💌🕊️",
+     "MAHEEN STARTED THE DRAMA, SAID ‘WHO, ME?!’ AND GOT CAUGHT IN 4K 📸💀",
+     "MAHEEN’S NICKNAMES HAVE BEEN REVIEWED BY THE POTATO COUNCIL. LEGENDARY NONSENSE 🥔🏅",
+     "MAHEEN PRETENDS NOT TO CARE BUT HAS A FULL DATABASE OF TINY DETAILS. SUSPICIOUSLY WHOLESOME 🕵️‍♀️💗"
+   ];
+   m.textContent=roastLines[qIndex];
+   spinBtn.textContent=qIndex===questions.length-1?"FINISH QUEST":"NEXT QUESTION";
+   spinBtn.disabled=false; busy=false; awaitingNextQuestion=true;
  },3350);
 }
-spinBtn.onclick=runQuest;
+spinBtn.onclick=()=>{playSfx("click");runQuest();};
+document.querySelector(".title").addEventListener("click",()=>{showEgg("POTATO PROTOCOL ACTIVATED. There is no protocol. 🥔💀");playSfx("click");});
+document.querySelector(".footer").addEventListener("click",()=>{showEgg("You found the footer secret: Maheen owes the potato council snacks. 🍟");playSfx("win");});
 const openQuestBtn=document.getElementById("openQuestBtn");
 openQuestBtn.addEventListener("click",()=>{
+  playSfx("click");
   o.style.display="flex";
   questQuestions.style.display="block";
   questWheelArea.style.display="none";
-  qIndex=0; renderQuestion();
+  questMainTitle.textContent="👁️ QUEST: WHO SHOULD APOLOGIZE?";
+  qIndex=0; awaitingNextQuestion=false; questFinished=false; busy=false; renderQuestion();
   window.scrollTo({top:o.offsetTop||0,behavior:"smooth"});
 });
 </script><script id="nicknameStartScript">
@@ -238,5 +364,37 @@ document.querySelectorAll("#nicknameOverlay button").forEach(btn=>{
     }
   });
 });
+</script>
+<button id="secretPotato" type="button" aria-label="Secret potato Easter egg">🥔</button><div id="eggToast" role="status" aria-live="polite"></div>
+
+<script id="questOpenFailsafe">
+(function(){
+  document.addEventListener("click", function(event){
+    const btn = event.target && event.target.closest ? event.target.closest("#openQuestBtn") : null;
+    if(!btn) return;
+    const overlay = document.getElementById("questOverlay");
+    if(!overlay) { alert("Quest panel is missing from this file. Please use the repaired download."); return; }
+    event.preventDefault();
+    overlay.style.display = "flex";
+    overlay.style.position = "fixed";
+    overlay.style.inset = "0";
+    overlay.style.zIndex = "99999";
+    overlay.style.overflowY = "auto";
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    const qs = document.getElementById("questQuestions");
+    const wheel = document.getElementById("questWheelArea");
+    if(qs) qs.style.display = "block";
+    if(wheel) wheel.style.display = "none";
+    const title = document.getElementById("questMainTitle");
+    if(title) title.textContent = "👁️ QUEST: WHO SHOULD APOLOGIZE?";
+    const qnum = document.getElementById("qNum"); if(qnum) qnum.textContent = "Question 1 of 5";
+    const qtext = document.getElementById("qText"); if(qtext) qtext.textContent = "Who is more stubborn?";
+    const progress = document.getElementById("qProgress"); if(progress) progress.textContent = "1 / 5";
+    const next = document.getElementById("qNext"); if(next){ next.disabled = true; next.textContent = "SHOW THE WHEEL"; }
+    document.querySelectorAll("#questQuestions .qChoice").forEach(function(b){ b.classList.remove("selected"); });
+    const msg = document.getElementById("questMsg"); if(msg) msg.textContent = "Choose your answer to begin. 😭🥔";
+  }, true);
+})();
 </script>
 </body></html>
