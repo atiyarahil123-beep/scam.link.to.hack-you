@@ -106,7 +106,7 @@
       <div class="qIntro">No wrong answers. Probably.</div>
       <div class="qCard">
         <div class="qNum" id="qNum">Question 1 of 5</div>
-        <div class="qText" id="qText">Who is more stubborn?</div>
+        <div class="qText" id="qText">Who should apologize first all the time, me or you?</div>
         <div class="qChoices">
           <button class="qChoice" data-choice="RAHIL">RAHIL</button>
           <button class="qChoice" data-choice="MAHEEN">MAHEEN</button>
@@ -202,7 +202,7 @@ const qNum=document.getElementById("qNum"),qText=document.getElementById("qText"
 const wheelQuestionTitle=document.getElementById("wheelQuestionTitle"),questMainTitle=document.getElementById("questMainTitle");
 const qChoices=[...document.querySelectorAll("#questQuestions .qChoice")];
 const questions=[
-  "Who is more stubborn?",
+  "Who should apologize first all the time, me or you?",
   "Who takes longer to reply?",
   "Who is more likely to say 'I did nothing' after starting the argument?",
   "Who has better nicknames?",
@@ -389,7 +389,7 @@ document.querySelectorAll("#nicknameOverlay button").forEach(btn=>{
     const title = document.getElementById("questMainTitle");
     if(title) title.textContent = "👁️ QUEST: WHO SHOULD APOLOGIZE?";
     const qnum = document.getElementById("qNum"); if(qnum) qnum.textContent = "Question 1 of 5";
-    const qtext = document.getElementById("qText"); if(qtext) qtext.textContent = "Who is more stubborn?";
+    const qtext = document.getElementById("qText"); if(qtext) qtext.textContent = "Who should apologize first all the time, me or you?";
     const progress = document.getElementById("qProgress"); if(progress) progress.textContent = "1 / 5";
     const next = document.getElementById("qNext"); if(next){ next.disabled = true; next.textContent = "SHOW THE WHEEL"; }
     document.querySelectorAll("#questQuestions .qChoice").forEach(function(b){ b.classList.remove("selected"); });
