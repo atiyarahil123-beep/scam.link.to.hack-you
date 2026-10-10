@@ -86,7 +86,13 @@
 #surpriseExperience .sx-surprised-shin img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;visibility:visible!important;opacity:1!important}
 @keyframes sx-image-bounce{from{transform:translateY(2px) rotate(-3deg)}to{transform:translateY(-7px) rotate(3deg)}}
 @media(max-width:600px){#surpriseExperience .sx-pass-layout{display:flex;flex-direction:column;align-items:center}#surpriseExperience .sx-kid-image img{max-height:210px!important}#surpriseExperience .sx-photo-and-shin{display:flex;flex-wrap:wrap;justify-content:center}#surpriseExperience .sx-photo-placeholder{width:min(82%,330px)}#surpriseExperience .sx-surprised-wrap{width:min(72%,260px);height:230px}}
-</style></head><body><style>
+<style id="surprise-image-visibility-hotfix">/* Force embedded reaction images above inherited site styles */
+#surpriseExperience .sx-kid-image{display:flex!important;align-items:center!important;justify-content:center!important;min-width:120px!important;min-height:150px!important;overflow:visible!important;visibility:visible!important;opacity:1!important}
+#surpriseExperience .sx-kid-image img{display:block!important;flex:none!important;position:relative!important;width:auto!important;height:auto!important;min-width:90px!important;min-height:90px!important;max-width:min(100%,260px)!important;max-height:250px!important;object-fit:contain!important;object-position:center!important;visibility:visible!important;opacity:1!important;content:normal!important}
+#surpriseExperience .sx-heart-art .sx-kid-image{min-width:0!important;min-height:0!important;width:100%!important;height:145px!important}
+#surpriseExperience .sx-heart-art .sx-kid-image img{min-width:90px!important;min-height:90px!important;max-height:145px!important}
+@media(max-width:600px){#surpriseExperience .sx-kid-image img{max-width:min(100%,230px)!important;max-height:210px!important}}
+</style></style></head><body><style>
 #questOverlay .spinBox{max-width:560px;width:100%;background:#1c151b;border:1px solid #49343d;border-radius:22px;padding:28px 22px 24px;box-shadow:0 25px 70px #000;text-align:center}
 #questOverlay .spinTitle{font:700 28px Georgia,serif;margin:0 0 6px;color:#f4eadf}
 #questOverlay .spinSub{font:14px Arial;color:#b7a6ad;margin:0 0 10px}
